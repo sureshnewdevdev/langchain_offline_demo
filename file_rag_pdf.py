@@ -32,7 +32,7 @@ def main():
     prompt = f"""
 Answer the question using only the PDF context below.
 
-Context:
+Context:  
 {context}
 
 Question:
