@@ -23,6 +23,9 @@ def main():
     vectorstore = Chroma.from_documents(chunks, embeddings)
     retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 
+# Cat is my Friend. Cat can drink milk. Cat can sleep on the sofa. Cat is very cute. Cat likes to play with yarn. Cat is a good companion. Cat can purr when happy. Cat has sharp claws. Cat can climb trees. Cat is a popular pet.
+# [Cat],[Cat is users frind],[Cat is Drinks milk],[Cat can sleep on the sofa],[Cat is very cute],[Cat likes to play with yarn],[Cat is a good companion],[Cat can purr when happy],[Cat has sharp claws],[Cat can climb trees],[Cat is a popular pet]
+    
     llm = ChatOllama(model="phi3", temperature=0)
 
     question = input("Enter your question: ").strip()
